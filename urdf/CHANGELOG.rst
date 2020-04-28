@@ -2,6 +2,13 @@
 Changelog for package urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.3.0 (2020-04-28)
+------------------
+* Export targets in a addition to include directories / libraries. (`#10 <https://github.com/ros2/urdf/issues/10>`_)
+* Force explicit language for uncrustify. (`#9 <https://github.com/ros2/urdf/issues/9>`_)
+* Code style only: wrap after open parenthesis if not in one line. (`#8 <https://github.com/ros2/urdf/issues/8>`_)
+* Contributors: Dirk Thomas
+
 2.2.0 (2018-11-20)
 ------------------
 * Update to remove unneeded console_bridge dependency. (`#4 <https://github.com/ros2/urdf/issues/4>`_)
