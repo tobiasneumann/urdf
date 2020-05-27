@@ -2,6 +2,11 @@
 Changelog for package urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.4.0 (2020-05-26)
+------------------
+* Deprecate methods that require tinyxml (`#12 <https://github.com/ros2/urdf/issues/12>`_)
+* Contributors: Dan Rose
+
 2.3.0 (2020-04-28)
 ------------------
 * Export targets in a addition to include directories / libraries. (`#10 <https://github.com/ros2/urdf/issues/10>`_)
