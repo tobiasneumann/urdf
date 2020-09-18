@@ -1,7 +1,7 @@
 /*********************************************************************
 * Software License Agreement (BSD License)
 *
-*  Copyright (c) 2013, Willow Garage, Inc.
+*  Copyright (c) 2020, Willow Garage, Inc.
 *  All rights reserved.
 *
 *  Redistribution and use in source and binary forms, with or without
@@ -32,45 +32,56 @@
 *  POSSIBILITY OF SUCH DAMAGE.
 *********************************************************************/
 
-/* Author: Ioan Sucan */
-
-#ifndef URDF_PARSER_PLUGIN_H
-#define URDF_PARSER_PLUGIN_H
-
-#include <urdf_world/types.h>
+#include <benchmark/benchmark.h>
+#include <urdf_parser/urdf_parser.h>
 
 #include <string>
 
-namespace urdf
+#include "urdf/model.h"
+
+const char test_xml[] =
+  "<?xml verison=\"1.0\"?>"
+  "<robot name=\"benchy_bot\">"
+  "  <link name=\"link1\">"
+  "    <inertial>"
+  "      <mass value=\"1\"/>"
+  "      <inertia ixx=\"1\" iyy=\"1\" izz=\"1\" ixy=\"0\" ixz=\"0\" iyz=\"0\"/>"
+  "    </inertial>"
+  "    <visual>"
+  "      <geometry>"
+  "        <box size=\"1 1 1\"/>"
+  "      </geometry>"
+  "    </visual>"
+  "    <collision>"
+  "      <geometry>"
+  "        <box size=\"1 1 1\"/>"
+  "      </geometry>"
+  "    </collision>"
+  "  </link>"
+  "</robot>";
+
+static void BM_no_plugin(benchmark::State & state)
 {
-
-/** \brief Base class for URDF parsers */
-class URDFParser
-{
-public:
-  URDFParser()
-  {
+  for (auto _ : state) {
+    if (nullptr == urdf::parseURDF(test_xml)) {
+      state.SkipWithError("Failed to read xml");
+      break;
+    }
   }
-  virtual ~URDFParser()
-  {
-  }
-
-  /// \brief Load Model from string
-  /// \return nullptr and write to stderr if the given string is invalid
-  virtual urdf::ModelInterfaceSharedPtr parse(const std::string & data) = 0;
-
-  /// \brief Indicate if data is meant to be parsed by this parser
-  /// \return The position in the string that the plugin became confident the
-  ///         data is intended to be parsed by it.
-  ///         For example, the plugin parsing COLLADA files might return the
-  ///         position in the string that the '<COLLADA>' xml tag was found.
-  ///         Smaller values are interpretted as more confidence, and the
-  ///         plugin with the smallest value is used to parse the data.
-  ///         If a plugin believes data is not meant for it, then it should
-  ///         return a value greater than or equal to data.size().
-  virtual size_t might_handle(const std::string & data) = 0;
-};
-  
 }
 
-#endif
+static void BM_with_plugin(benchmark::State & state)
+{
+  for (auto _ : state) {
+    urdf::Model m;
+    if (!m.initString(test_xml)) {
+      state.SkipWithError("Failed to read xml");
+      break;
+    }
+  }
+}
+
+BENCHMARK(BM_no_plugin);
+BENCHMARK(BM_with_plugin);
+
+BENCHMARK_MAIN();

@@ -37,6 +37,7 @@
 #ifndef URDF__MODEL_H_
 #define URDF__MODEL_H_
 
+#include <memory>
 #include <string>
 
 #include "tinyxml.h"  // NOLINT
@@ -48,24 +49,39 @@
 namespace urdf
 {
 
+// PIMPL Forward Declaration
+class ModelImplementation;
+
+/// \brief Populates itself based on a robot descripton
+///
+/// This class uses `urdf_parser_plugin` to parse the given robot description.
+/// The chosen plugin is the one that reports the most confident score.
+/// There is no way to override this choice except by uninstalling undesirable
+/// parser plugins.
 class Model : public ModelInterface
 {
 public:
+  URDF_EXPORT
+  Model();
+
+  URDF_EXPORT
+  ~Model();
+
   /// \brief Load Model from TiXMLElement
   [[deprecated("use initString instead")]]
   URDF_EXPORT bool initXml(TiXmlElement * xml);
   /// \brief Load Model from TiXMLDocument
   [[deprecated("use initString instead")]]
   URDF_EXPORT bool initXml(TiXmlDocument * xml);
+
   /// \brief Load Model given a filename
   URDF_EXPORT bool initFile(const std::string & filename);
-  /// \brief Load Model given the name of a parameter on the parameter server
-  // URDF_EXPORT bool initParam(const std::string & param);
-  /// \brief Load Model given the name of parameter on parameter server using provided nodehandle
-  // URDF_EXPORT bool initParamWithNodeHandle(const std::string & param,
-  //   const ros::NodeHandle & nh = ros::NodeHandle());
+
   /// \brief Load Model from a XML-string
   URDF_EXPORT bool initString(const std::string & xmlstring);
+
+private:
+  std::unique_ptr<ModelImplementation> impl_;
 };
 
 // shared_ptr declarations moved to urdf/urdfdom_compatibility.h to allow for
