@@ -2,8 +2,8 @@
 Changelog for package urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.5.0 (2020-10-05)
+------------------
 * Enable -Wall -Wextra -Wpedantic (`#20 <https://github.com/ros2/urdf/issues/20>`_)
 * Add dependency on TinyXML2 (`#19 <https://github.com/ros2/urdf/issues/19>`_)
 * Remove TinyXML dependency from urdf. (`#17 <https://github.com/ros2/urdf/issues/17>`_)
