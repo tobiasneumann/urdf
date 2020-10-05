@@ -2,6 +2,11 @@
 Changelog for package urdf_parser_plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Make urdf plugable and revive urdf_parser_plugin (`#13 <https://github.com/ros2/urdf/issues/13>`_)
+* Contributors: Shane Loretz
+
 2.1.0 (2018-06-25)
 ------------------
 * Update project URLs (`#2 <https://github.com/ros2/urdf/issues/2>`_)

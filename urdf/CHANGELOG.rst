@@ -2,6 +2,14 @@
 Changelog for package urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Enable -Wall -Wextra -Wpedantic (`#20 <https://github.com/ros2/urdf/issues/20>`_)
+* Add dependency on TinyXML2 (`#19 <https://github.com/ros2/urdf/issues/19>`_)
+* Remove TinyXML dependency from urdf. (`#17 <https://github.com/ros2/urdf/issues/17>`_)
+* Make urdf plugable and revive urdf_parser_plugin (`#13 <https://github.com/ros2/urdf/issues/13>`_)
+* Contributors: Audrow Nash, Chris Lalancette, Shane Loretz
+
 2.4.0 (2020-05-26)
 ------------------
 * Deprecate methods that require tinyxml (`#12 <https://github.com/ros2/urdf/issues/12>`_)
