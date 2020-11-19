@@ -46,6 +46,13 @@
 #include <utility>
 #include <vector>
 
+// Windows has preprocessor defines for "max", which conflicts with
+// several things (one of them being std::numeric_limits<T>::max()).  Since
+// we know we aren't going to use that macros, and this is a cpp (not header
+// file), we just undefine it on Windows.
+#ifdef _WIN32
+#undef max
+#endif
 
 namespace urdf
 {
