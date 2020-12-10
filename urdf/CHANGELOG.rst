@@ -2,6 +2,11 @@
 Changelog for package urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Work around Windows min/max bug. (`#21 <https://github.com/ros2/urdf/issues/21>`_)
+* Contributors: Chris Lalancette
+
 2.5.0 (2020-10-05)
 ------------------
 * Enable -Wall -Wextra -Wpedantic (`#20 <https://github.com/ros2/urdf/issues/20>`_)
