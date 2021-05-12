@@ -2,8 +2,8 @@
 Changelog for package urdf_parser_plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.5.2 (2021-05-12)
+------------------
 * Export urdfdom_headers as urdf_parser_plugin dependency. (`#25 <https://github.com/ros2/urdf/issues/25>`_)
 * Contributors: Michel Hidalgo
 
