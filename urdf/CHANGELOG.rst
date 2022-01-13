@@ -2,6 +2,12 @@
 Changelog for package urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.5.3 (2022-01-13)
+------------------
+* Add linter tests and fix errors (`#30 <https://github.com/ros2/urdf/issues/30>`_)
+* Add in a Doxyfile to predefine macros. (`#28 <https://github.com/ros2/urdf/issues/28>`_)
+* Contributors: Chris Lalancette, Jacob Perron
+
 2.5.2 (2021-05-12)
 ------------------
 

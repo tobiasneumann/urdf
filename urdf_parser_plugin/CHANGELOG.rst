@@ -2,6 +2,11 @@
 Changelog for package urdf_parser_plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.5.3 (2022-01-13)
+------------------
+* Add linter tests and fix errors (`#30 <https://github.com/ros2/urdf/issues/30>`_)
+* Contributors: Jacob Perron
+
 2.5.2 (2021-05-12)
 ------------------
 * Export urdfdom_headers as urdf_parser_plugin dependency. (`#25 <https://github.com/ros2/urdf/issues/25>`_)
