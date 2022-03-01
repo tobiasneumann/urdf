@@ -2,6 +2,11 @@
 Changelog for package urdf_parser_plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Install headers to include/${PROJECT_NAME} (`#31 <https://github.com/ros2/urdf/issues/31>`_)
+* Contributors: Shane Loretz
+
 2.5.3 (2022-01-13)
 ------------------
 * Add linter tests and fix errors (`#30 <https://github.com/ros2/urdf/issues/30>`_)
