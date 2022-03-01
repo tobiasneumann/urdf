@@ -2,8 +2,8 @@
 Changelog for package urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.6.0 (2022-03-01)
+------------------
 * Install headers to include/${PROJECT_NAME} (`#31 <https://github.com/ros2/urdf/issues/31>`_)
 * Contributors: Shane Loretz
 
