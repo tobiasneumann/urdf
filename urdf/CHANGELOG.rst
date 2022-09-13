@@ -2,6 +2,11 @@
 Changelog for package urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Provide copy and move constructors for `model` (`#33 <https://github.com/ros2/urdf/issues/33>`_)
+* Contributors: Daniel Reuter
+
 2.7.0 (2022-05-04)
 ------------------
 
@@ -12,7 +17,7 @@ Changelog for package urdf
 
 2.5.3 (2022-01-13)
 ------------------
-* Add linter tests and fix errors (`#30 <https://github.com/ros2/urdf/issues/30>`_)
+* Add linter tests and fix errors (`#30 <https://github.com/ros2/urdf/issues/30>`__)
 * Add in a Doxyfile to predefine macros. (`#28 <https://github.com/ros2/urdf/issues/28>`_)
 * Contributors: Chris Lalancette, Jacob Perron
 
@@ -182,4 +187,4 @@ Changelog for package urdf
 
 1.10.15 (2013-08-17)
 --------------------
-* fix `#30 <https://github.com/ros/robot_model/issues/30>`_
+* fix `#30 <https://github.com/ros/robot_model/issues/30>`__
