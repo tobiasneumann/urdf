@@ -2,8 +2,8 @@
 Changelog for package urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.8.0 (2022-09-13)
+------------------
 * Provide copy and move constructors for `model` (`#33 <https://github.com/ros2/urdf/issues/33>`_)
 * Contributors: Daniel Reuter
 
