@@ -30,6 +30,8 @@
   <exec_depend>pluginlib</exec_depend>
   <exec_depend>tinyxml2_vendor</exec_depend>
   <exec_depend>urdfdom</exec_depend>
+  <!-- while `urdf_parser_plugin` itself its a header only lib, the `pluginlib` requires the package to exists during runtime. -->
+  <exec_depend>urdf_parser_plugin</exec_depend>
   <!-- use ROS 2 package urdfdom_headers until upstream provides 1.0.0.-->
   <exec_depend>urdfdom_headers</exec_depend>
 
